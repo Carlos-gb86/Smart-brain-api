@@ -13,6 +13,7 @@ app.models.predict({
     	},
         req.body.input)
 		.then(data => res.json(data))
+		.catch(err => res.status(400).json('Unable to work with API'))
 		
 }
 
